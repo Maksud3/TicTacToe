@@ -11,6 +11,7 @@ public class Main {
             var frame = new MainFrame();
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setTitle("TicTacToe");
+            frame.setIconImage(new ImageIcon(Main.class.getResource("/images/icon.png")).getImage());
             frame.setVisible(true);
         });
     }

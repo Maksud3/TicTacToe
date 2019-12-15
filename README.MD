@@ -1,2 +1,1 @@
-TicTacToe Java game.(Swing)
-Without bots.
+Tic-Tac-Toe Java game using Swing. Without bots.

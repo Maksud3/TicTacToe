@@ -24,7 +24,7 @@ public class MainFrame extends JFrame {
         setLocation(left, top);
 
         createLabel();
-        add(new GamePanel(labelPanel), BorderLayout.CENTER);
+        add(new GamePanel(this, labelPanel), BorderLayout.CENTER);
 
         pack();
     }
