@@ -8,7 +8,8 @@
     <artifactId>TicTacToe</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <reporting>
+    <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -19,18 +20,11 @@
                         <format>html</format>
                         <format>xml</format>
                     </formats>
-                    <reportSets>
-                        <reportSet>
-                            <reports>
-                                <report>cobertura</report>
-                            </reports>
-                        </reportSet>
-                    </reportSets>
                     <check />
                 </configuration>
             </plugin>
         </plugins>
-    </reporting>
+    </build>
 
     
 </project>
