@@ -4,6 +4,7 @@ out/
 *.iml
 *.MF
 *.exe
+target/
 =======
 >>>>>>> 80f3bef4b1ae1f16c3bb3fe92c7ae59f88290584
 # Compiled class file
