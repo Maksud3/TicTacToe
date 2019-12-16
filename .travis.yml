@@ -6,8 +6,6 @@ before_install:
 
 install: true
 script: mvn clean install
- 
-script: "mvn cobertura:cobertura"
 
 
 cache:
