@@ -4,7 +4,7 @@ jdk: openjdk10
 install: true
 script: mvn clean install
  
- script: "mvn cobertura:cobertura"
+script: "mvn cobertura:cobertura"
 
 
 cache:
