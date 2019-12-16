@@ -1,6 +1,9 @@
 language: java
 jdk: openjdk10
 
+before_install:
+  - pip install --user codecov
+
 install: true
 script: mvn clean install
  
@@ -14,4 +17,4 @@ cache:
   
   
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - codecov
