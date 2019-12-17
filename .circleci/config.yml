@@ -33,6 +33,10 @@ jobs:
             - v1-dependencies-
 
       - run: mvn dependency:go-offline
+      
+      - codecov/upload:
+          file: "coverage.xml"
+          token: "6deaef85-1e8b-4640-9352-0c73bb117b01"
 
       - save_cache:
           paths:
@@ -41,7 +45,3 @@ jobs:
 
       # run tests!
       - run: mvn integration-test
-      
-      - codecov/upload:
-          file: "coverage.xml"
-          token: "6deaef85-1e8b-4640-9352-0c73bb117b01"
