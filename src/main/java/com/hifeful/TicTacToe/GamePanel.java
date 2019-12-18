@@ -31,17 +31,13 @@ public class GamePanel extends JComponent {
         Random rd = new Random();
         turn = rd.nextBoolean();
 
-        System.out.println(turn);
-
         if (turn) {
             statusLabel.setText("O TURN");
             statusLabel.paintImmediately(statusLabel.getVisibleRect());
-            System.out.println("That's OOOOOOO");
         }
         else {
             statusLabel.setText("X TURN");
             statusLabel.paintImmediately(statusLabel.getVisibleRect());
-            System.out.println("That's XXXXXXXXX");
         }
 
         setLayout(new GridLayout(3, 3));
@@ -61,7 +57,8 @@ public class GamePanel extends JComponent {
                     }
                     else if (drawnCells[Integer.parseInt(getText())] == 'o') {
                         var circle = new Ellipse2D.Double();
-                        circle.setFrameFromCenter((double)getWidth() / 2, (double)getHeight() / 2, ((double)getWidth() / 2) + 100, ((double)getHeight() / 2) + 100);
+                        circle.setFrameFromCenter((double)getWidth() / 2, (double)getHeight() / 2,
+                                ((double)getWidth() / 2) - 15 + ((double)getWidth() / 2), ((double)getHeight() / 2) - 15 + (double)getHeight() / 2);
                         g2.draw(circle);
                     }
                 }
@@ -133,10 +130,8 @@ public class GamePanel extends JComponent {
 
                             statusLabel.setText("O TURN");
                         }
-                        System.out.println("THAT SHIT DON'T EQUAL X OR O");
                     }
                     else
-                        System.out.println("THAT SHIT EQUALS X OR O");
 
                     return;
                 }
@@ -156,13 +151,11 @@ public class GamePanel extends JComponent {
                     (drawnCells[0] == 'o' && drawnCells[4] == 'o' && drawnCells[8] == 'o') ||
                     (drawnCells[2] == 'o' && drawnCells[4] == 'o' && drawnCells[6] == 'o')
             ) {
-                System.out.println("O WINS");
                 new EndGameDialog(ownerFrame, this, "O WON").setVisible(true);
                 return true;
             }
 
             if (turnsCounter == 9) {
-                System.out.println("DRAW");
                 new EndGameDialog(ownerFrame, this, "DRAW").setVisible(true);
                 return true;
             }
@@ -178,13 +171,11 @@ public class GamePanel extends JComponent {
                     (drawnCells[0] == 'x' && drawnCells[4] == 'x' && drawnCells[8] == 'x') ||
                     (drawnCells[2] == 'x' && drawnCells[4] == 'x' && drawnCells[6] == 'x')
             ) {
-                System.out.println("X WINS");
                 new EndGameDialog(ownerFrame, this, "X WON").setVisible(true);
                 return true;
             }
 
             if (turnsCounter == 9) {
-                System.out.println("DRAW");
                 new EndGameDialog(ownerFrame, this, "DRAW").setVisible(true);
                 return true;
             }
