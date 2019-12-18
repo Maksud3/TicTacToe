@@ -1,4 +1,4 @@
-[![CircleCI](https://img.shields.io/circleci/build/github/Maksud3/TicTacToe/master)](https://circleci.com/gh/Maksud3/TicTacToe/tree/master)
+[![Build Status](https://travis-ci.org/Maksud3/TicTacToe.svg?branch=master)](https://travis-ci.org/Maksud3/TicTacToe)
 
 Tic-Tac-Toe Java game using Swing. Without bots.
 
